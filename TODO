@@ -1,13 +1,13 @@
 TODO
 
-Write out model spec
-Generate lunchonfourwheels2 app
-Commit to github
-Add rspec / capybara gems
-Generate rspec files
+x Write out model spec
+x Generate lunchonfourwheels2 app
+x Commit to github
+x Add rspec / capybara gems
+x Generate rspec files
 
-Generate Truck model
-Create seed data for truck (Marination, Where Ya At Matt, Skillet, Barriga Llena, Pai's)
+x Generate Truck model
+x Create seed data for truck (Marination, Where Ya At Matt, Skillet, Barriga Llena, Pai's)
 Modify index page to redirect to trucks list (for now)
 
 Generate Neigborhood model
