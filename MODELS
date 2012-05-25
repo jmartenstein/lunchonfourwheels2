@@ -1,0 +1,37 @@
+Trucks
+  id       automatic
+  name     string
+  website  string
+  twitter  string
+  yelp     string
+
+Locations
+  id               automatic
+  latitude         float?
+  longitude        float?
+  address          string
+  description      string
+  neighborhood_id  integer
+  city             string
+
+Stops
+  id               automatic
+  truck_id         integer
+  location_id      integer
+  day              string
+  hours            string
+
+TruckFood
+  food_id          integer
+  truck_id         integer
+
+Foods
+  id               automatic
+  name             string
+
+Neighborhoods
+  id               automatic
+  name             string
+
+
+
