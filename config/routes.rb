@@ -1,4 +1,6 @@
 Lunchonfourwheels2::Application.routes.draw do
+  resources :neighborhoods
+
   resources :trucks
 
   # The priority is based upon order of creation:

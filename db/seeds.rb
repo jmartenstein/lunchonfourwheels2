@@ -40,3 +40,11 @@ pais_truck = Truck.create([{
   twitter: "paifoods",
   yelp: "http://www.yelp.com/biz/pais-seattle"
 }])
+
+sodo_hood = Neighborhood.create([{
+  name: "SoDo"
+}])
+
+slu_hood = Neighborhood.create([{
+  name: "South Lake Union"
+}])
