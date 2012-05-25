@@ -8,18 +8,22 @@ x Generate rspec files
 
 x Generate Truck model
 x Create seed data for truck (Marination, Where Ya At Matt, Skillet, Barriga Llena, Pai's)
-Modify index page to redirect to trucks list (for now)
 
-Generate Neigborhood model
-Create seed entries for Neighborhood (South Lake Union, SoDo)
+x Generate Neigborhood model
+x Create seed entries for Neighborhood (South Lake Union, SoDo)
 
-Generate Location model
-Create seed data for locations (1126 Harrison St., 2401 Utah Ave. S, 309 Pontius Ave. N)
+x Generate Location model
+x Create seed data for locations (1126 Harrison St., 2401 Utah Ave. S, 309 Pontius Ave. N)
 
 Generate Stop model
 Create seed data for stops (check intersections between trucks and locations)
 
 Reformat Truck page to show stops for this week
+Write out curl string to lookup LatLong for 1126 Harrison
+Write two unit tests for lookupLatLong: one for 1126 Harrsion, and one for 2401 Utah Ave.
+Write lookupLatLong function for Location objects
+
+Modify index page to redirect to trucks list (for now)
 Add "New Stop" link to Truck page
 Add "Edit Stop" links next to each stop
 Tweak "Edit" links to only show up on rollover
