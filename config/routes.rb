@@ -1,4 +1,6 @@
 Lunchonfourwheels2::Application.routes.draw do
+  resources :stops
+
   resources :locations
 
   resources :neighborhoods

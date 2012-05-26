@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Truck:</b>
+  <%= @stop.truck_id %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @stop.location_id %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @stop.day %>
+</p>
+
+<p>
+  <b>Hours:</b>
+  <%= @stop.hours %>
+</p>
+
+
+<%= link_to 'Edit', edit_stop_path(@stop) %> |
+<%= link_to 'Back', stops_path %>

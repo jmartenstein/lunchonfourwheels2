@@ -1,0 +1,29 @@
+<h1>Listing stops</h1>
+
+<table>
+  <tr>
+    <th>Truck</th>
+    <th>Location</th>
+    <th>Day</th>
+    <th>Hours</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @stops.each do |stop| %>
+  <tr>
+    <td><%= stop.truck_id %></td>
+    <td><%= stop.location_id %></td>
+    <td><%= stop.day %></td>
+    <td><%= stop.hours %></td>
+    <td><%= link_to 'Show', stop %></td>
+    <td><%= link_to 'Edit', edit_stop_path(stop) %></td>
+    <td><%= link_to 'Destroy', stop, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Stop', new_stop_path %>

@@ -41,13 +41,8 @@ pais_truck = Truck.create(
   yelp: "http://www.yelp.com/biz/pais-seattle"
 )
 
-sodo_hood = Neighborhood.create(
-  name: "SoDo"
-)
-
-slu_hood = Neighborhood.create(
-  name: "South Lake Union"
-)
+sodo_hood  = Neighborhood.create( name: "SoDo" )
+slu_hood   = Neighborhood.create( name: "South Lake Union" )
 
 harrison1126_loc = Location.create(
   address: "1126 Harrison St.",
@@ -61,4 +56,39 @@ utah2401_loc = Location.create(
   description: "Starbucks HQ",
   city_state: "Seattle, WA",
   neighborhood_id: sodo_hood.id
+)
+
+pontius309_loc = Location.create(
+  address: "309 Pontius Ave. N",
+  description: "Cascase People's Center",
+  city_state: "Seattle, WA",
+  neighborhood_id: slu_hood.id
+)
+
+marination_mon_stop = Stop.create(
+  truck_id: marination_truck.id,
+  location_id: pontius309_loc.id,
+  day: "Mondays",
+  hours: "11am - 2pm"
+)
+
+marination_thu_stop = Stop.create(
+  truck_id: marination_truck.id,
+  location_id: utah2401_loc.id,
+  day: "Thursday",
+  hours: "11am - 2pm"
+)
+
+whereyaat_wed_stop = Stop.create(
+  truck_id: whereyaat_truck.id,
+  location_id: pontius309_loc.id,
+  day: "Wednesdays",
+  hours: "11am - 2pm"
+)
+
+pais_tue_stop = Stop.create(
+  truck_id: pais_truck.id,
+  location_id: harrison1126_loc.id,
+  day: "Tuesdays",
+  hours: "11am - 2pm"
 )
