@@ -15,11 +15,14 @@ x Create seed entries for Neighborhood (South Lake Union, SoDo)
 x Generate Location model
 x Create seed data for locations (1126 Harrison St., 2401 Utah Ave. S, 309 Pontius Ave. N)
 
-Generate Stop model
-Create seed data for stops (check intersections between trucks and locations)
+x Generate Stop model
+x Create seed data for stops (check intersections between trucks and locations)
 
+Create a function "stop_by_day" that returns today's trucks
 Reformat Truck page to show stops for this week
+
 Write out curl string to lookup LatLong for 1126 Harrison
+Write out skeleton function for lookupLatLong
 Write two unit tests for lookupLatLong: one for 1126 Harrsion, and one for 2401 Utah Ave.
 Write lookupLatLong function for Location objects
 
