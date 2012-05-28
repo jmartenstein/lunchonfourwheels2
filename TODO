@@ -4,10 +4,11 @@ x Add has_many and belongs_to methods to classes
 x Must be able to return stops by truck and stops by neighborhood
 x Must be able to return stops for a particular day
 
-Write out skeleton function for "find_stops_by_day" in Truck class
-Write out unit test to look up Marination on a Monday
-Write out unit test to look up Pai's on a Tuesday
-Recreate function for Neighborhood class
+x Write out skeleton function for "find_stops_by_day" in Truck class
+x Write out unit test to look up Marination on a Thursday
+x Write out unit test to look up Pai's on a Friday
+Rewrite "find_stops_by_date" function to be a method from Stop class, 
+  called "find_by_date"
 Reformat Truck page to show stops for this week
 
 Write out skeleton function for lookup_lat_long in Location class
