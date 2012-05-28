@@ -1,28 +1,17 @@
 TODO
 
-x Write out model spec
-x Generate lunchonfourwheels2 app
-x Commit to github
-x Add rspec / capybara gems
-x Generate rspec files
+x Add has_many and belongs_to methods to classes
+x Must be able to return stops by truck and stops by neighborhood
+x Must be able to return stops for a particular day
 
-x Generate Truck model
-x Create seed data for truck (Marination, Where Ya At Matt, Skillet, Barriga Llena, Pai's)
-
-x Generate Neigborhood model
-x Create seed entries for Neighborhood (South Lake Union, SoDo)
-
-x Generate Location model
-x Create seed data for locations (1126 Harrison St., 2401 Utah Ave. S, 309 Pontius Ave. N)
-
-x Generate Stop model
-x Create seed data for stops (check intersections between trucks and locations)
-
-Create a function "stop_by_day" that returns today's trucks
+Write out skeleton function for "find_stops_by_day" in Truck class
+Write out unit test to look up Marination on a Monday
+Write out unit test to look up Pai's on a Tuesday
+Recreate function for Neighborhood class
 Reformat Truck page to show stops for this week
 
+Write out skeleton function for lookup_lat_long in Location class
 Write out curl string to lookup LatLong for 1126 Harrison
-Write out skeleton function for lookupLatLong
 Write two unit tests for lookupLatLong: one for 1126 Harrsion, and one for 2401 Utah Ave.
 Write lookupLatLong function for Location objects
 
