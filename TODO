@@ -7,9 +7,11 @@ x Must be able to return stops for a particular day
 x Write out skeleton function for "find_stops_by_day" in Truck class
 x Write out unit test to look up Marination on a Thursday
 x Write out unit test to look up Pai's on a Friday
-Rewrite "find_stops_by_date" function to be a method from Stop class, 
+o Rewrite "find_stops_by_date" function to be a method from Stop class, 
   called "find_by_date"
 Reformat Truck page to show stops for this week
+
+How to easily / quickly load data?
 
 Write out skeleton function for lookup_lat_long in Location class
 Write out curl string to lookup LatLong for 1126 Harrison
