@@ -14,6 +14,8 @@ class TrucksController < ApplicationController
   # GET /trucks/1.json
   def show
     @truck = Truck.find(params[:id])
+    @this_weeks_stops = @truck.find_stops_by_date_range(
+      Date.today, Date.today+7 )
 
     respond_to do |format|
       format.html # show.html.erb
