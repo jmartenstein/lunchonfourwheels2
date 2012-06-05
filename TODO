@@ -1,25 +1,29 @@
 TODO
 
-x Add has_many and belongs_to methods to classes
-x Must be able to return stops by truck and stops by neighborhood
-x Must be able to return stops for a particular day
-
 x Write out skeleton function for "find_stops_by_day" in Truck class
 x Write out unit test to look up Marination on a Thursday
 x Write out unit test to look up Pai's on a Friday
 o Rewrite "find_stops_by_date" function to be a method from Stop class, 
   called "find_by_date"
-Reformat Truck page to show stops for this week
+x Reformat Truck page to show stops for this week
+
+x Remove MODELS file
+x Add Capybara gem
+x Write initial acceptance test
+x Write acceptance tests for stop show link of truck page
 
 How to easily / quickly load data?
 
-Write out skeleton function for lookup_lat_long in Location class
-Write out curl string to lookup LatLong for 1126 Harrison
-Write two unit tests for lookupLatLong: one for 1126 Harrsion, and one for 2401 Utah Ave.
-Write lookupLatLong function for Location objects
+Modify Stops index to show truck and location address / neighborhood
+Modify new / edit to show drop down boxes
 
 Modify index page to redirect to trucks list (for now)
 Add "New Stop" link to Truck page
 Add "Edit Stop" links next to each stop
 Tweak "Edit" links to only show up on rollover
+
+Write out skeleton function for lookup_lat_long in Location class
+Write out curl string to lookup LatLong for 1126 Harrison
+Write two unit tests for lookupLatLong: one for 1126 Harrsion, and one for 2401 Utah Ave.
+Write lookupLatLong function for Location objects
 
