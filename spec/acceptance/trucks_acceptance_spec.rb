@@ -18,9 +18,16 @@ feature "Trucks", %q{
     page.should have_content "Marination Mobile"
   end
 
-  scenario "Click link for first Marination stop" do
+  scenario "Click 'Show' link for first Marination stop" do
     visit '/trucks/1'
-    page.should have_xpath "//[@href='/stops/1']"
+    page.should have_xpath "//a[@href='/stops/1']"
+  end
+
+  scenario "Add a stop by clicking the 'New Stop' link" do
+    visit '/trucks/1'
+    page.should have_link "New Stop"
+    click_link "New Stop"
+    page.shoud have_content "Marination"
   end
 
 end
