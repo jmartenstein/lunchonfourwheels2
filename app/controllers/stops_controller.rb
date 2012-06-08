@@ -13,7 +13,11 @@ class StopsController < ApplicationController
   # GET /stops/1
   # GET /stops/1.json
   def show
-    @stop = Stop.find(params[:id])
+    @stop          = Stop.find(params[:id])
+
+    @truck         = @stop.truck
+    @location      = @stop.location
+    @neighborhood  = @location.neighborhood
 
     respond_to do |format|
       format.html # show.html.erb

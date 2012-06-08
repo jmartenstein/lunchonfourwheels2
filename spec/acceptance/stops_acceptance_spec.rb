@@ -12,4 +12,10 @@ feature "Stops", %q{
     page.should have_content @marination_truck.name
   end
 
+  scenario "Stop edit page shows truck name and day info" do
+    visit '/stops/1/edit'
+    page.should have_content @marination_truck.name
+    page.should have_content "Mondays"
+  end
+
 end  # feature Stops
