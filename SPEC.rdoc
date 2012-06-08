@@ -1,0 +1,55 @@
+== Lunch on Fours Wheels Spec
+
+This document describes the layout and functionality of the Lunch on Four
+Wheels app (in Rails). 
+
+== Partials
+
+101. Header
+
+102. Navigtion
+
+103. Footer
+
+
+== Miscellaneous Pages
+
+1001. Index
+
+Route: /
+
+Redirects to /today page (for now). Eventually, this page will show a map
+with pinpoints for the location of each truck. When the user visits, the site
+will attempt to query for the user's location and show any trucks nearby.
+
+
+1002. About
+
+Route: /about
+
+
+== Trucks
+
+1101. List Trucks
+
+Route: /trucks
+
+
+1102. Show Truck
+
+Route: /truck/:name
+
+Links
+   
+
+1103. Edit Truck
+
+1104. Delete Truck
+
+
+== Neighborhoods
+
+== Locations
+
+== Dates
+
