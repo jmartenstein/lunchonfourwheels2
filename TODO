@@ -12,15 +12,23 @@ x Add Capybara gem
 x Write initial acceptance test
 x Write acceptance tests for stop show link of truck page
 
-How to easily / quickly load data?
-
-Modify Stops index to show truck and location address / neighborhood
-Modify new / edit to show drop down boxes
-
-Modify index page to redirect to trucks list (for now)
+x Modify Stops index to show truck and location address / neighborhood
+Write out a complete scenario for starting at the "Trucks" page, and adding
+  a new stop to Marination Mobile
+Update Stop acceptance tests to look for truck names on Edit page
+Modify new / edit stop to show drop down boxes
 Add "New Stop" link to Truck page
+New Stop link from Truck page should pre-populate Truck drop-down
 Add "Edit Stop" links next to each stop
+
+Populate database with stops for every day of the week
+Add "today" route
+Add "tomorrow" route
+
 Tweak "Edit" links to only show up on rollover
+Modify index page to redirect to trucks list (for now)
+
+How to easily / quickly load data?
 
 Write out skeleton function for lookup_lat_long in Location class
 Write out curl string to lookup LatLong for 1126 Harrison
