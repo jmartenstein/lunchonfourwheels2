@@ -8,6 +8,7 @@ describe "trucks/show" do
       :twitter => "Twitter",
       :yelp => "Yelp"
     ))
+    @this_weeks_stops = []
   end
 
   it "renders attributes in <p>" do
