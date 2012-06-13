@@ -9,6 +9,8 @@ class Truck < ActiveRecord::Base
 
   def find_stops_by_date_range( first_date, second_date )
 
+    stops_val = []
+
     # first make sure that the second date actually comes after the first
     if (second_date >= first_date)
 
@@ -28,14 +30,12 @@ class Truck < ActiveRecord::Base
 
       # grab the truck object that were have instantiated
       @truck = Truck.find(id)
-
-      return @truck.stops.where( where_array.join( sep=" OR ") )
-
-    else
-       
-      return nil
+      stops_list = @truck.stops.where( where_array.join( 
+        sep=" OR ") ) || []
 
     end
+
+    return stops_list
 
   end
 
