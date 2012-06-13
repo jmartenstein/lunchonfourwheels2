@@ -24,7 +24,9 @@ describe StopsController do
   # Stop. As you add validations to Stop, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {
+      :location => Location.new()
+    }
   end
   
   # This should return the minimal set of values that should be in the session
