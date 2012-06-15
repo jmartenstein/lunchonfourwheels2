@@ -1,5 +1,6 @@
 class Truck < ActiveRecord::Base
-  has_many :stops, :dependent => :destroy
+  has_many :stops
+  validates_presence_of :name
 
   def find_stops_by_date( date=Date.today )
 
