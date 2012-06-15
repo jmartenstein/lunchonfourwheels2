@@ -6,11 +6,11 @@ feature "Trucks", %q{
   background do
   end
 
-  scenario "List index of all trucks" do
-    visit '/trucks'
-    page.should have_content "Marination Mobile"
-    page.should have_xpath "//a[@href='/trucks/1']"
-    page.should have_content "Skillet"
+  scenario "Add a new stop to the Marination Mobile page" do
+    visit '/trucks/1'
+    page.should have_link "New Stop"
+    click_link "New Stop"
+    page.shoud have_content "Marination"
   end
 
   scenario "Show page for first truck (Marination Mobile)" do
@@ -18,16 +18,14 @@ feature "Trucks", %q{
     page.should have_content "Marination Mobile"
   end
 
-  scenario "Click 'Show' link for first Marination stop" do
+  scenario "Confirm 'Show' link for first Marination stop" do
     visit '/trucks/1'
     page.should have_xpath "//a[@href='/stops/1']"
   end
 
-  scenario "Add a stop by clicking the 'New Stop' link" do
+  scenario "Confirm 'Edit' link for the  first Marination stop" do
     visit '/trucks/1'
-    page.should have_link "New Stop"
-    click_link "New Stop"
-    page.shoud have_content "Marination"
+    page.should have_xpath "//a[@href='stops/1/edit']"
   end
 
 end
