@@ -65,3 +65,38 @@ pontius309_loc = Location.create(
   neighborhood_id: slu_hood.id
 )
 
+marination_thu_stop = Stop.create(
+  truck_id: marination_truck.id,
+  location_id: utah2401_loc.id,
+  day: Date.parse("Thursday").to_s,
+  hours: "11am - 2pm"
+)
+
+marination_mon_stop = Stop.create(
+  truck_id: marination_truck.id,
+  location_id: pontius309_loc.id,
+  day: Date.parse("Monday").to_s,
+  hours: "11am - 2pm"
+)
+
+whereyaat_wed_stop = Stop.create(
+  truck_id: whereyaat_truck.id,
+  location_id: pontius309_loc.id,
+  day: Date.parse("Wednesday").to_s,
+  hours: "11am - 2pm"
+)
+
+pais_fri_stop = Stop.create(
+  truck_id: pais_truck.id,
+  location_id: utah2401_loc.id,
+  day: Date.parse("Friday").to_s,
+  hours: "11am - 2pm"
+)
+
+pais_tue_stop = Stop.create(
+  truck_id: pais_truck.id,
+  location_id: harrison1126_loc.id,
+  day: Date.parse("Tuesday").to_s,
+  hours: "11am - 2pm"
+)
+
