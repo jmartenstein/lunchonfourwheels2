@@ -6,13 +6,13 @@ describe "stops/index" do
       stub_model(Stop,
         :truck_id => 1,
         :location_id => 2,
-        :day => "Day",
+        :day => Date.today.to_s,
         :hours => "Hours"
       ),
       stub_model(Stop,
         :truck_id => 1,
         :location_id => 2,
-        :day => "Day",
+        :day => Date.today.to_s,
         :hours => "Hours"
       )
     ])
@@ -23,7 +23,7 @@ describe "stops/index" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => 1.to_s, :count => 2
     assert_select "tr>td", :text => 2.to_s, :count => 2
-    assert_select "tr>td", :text => "Day".to_s, :count => 2
+    assert_select "tr>td", :text => Date.today.to_s, :count => 2
     assert_select "tr>td", :text => "Hours".to_s, :count => 2
   end
 end
