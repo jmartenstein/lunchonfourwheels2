@@ -8,7 +8,23 @@ describe "trucks/show" do
       :twitter => "Twitter",
       :yelp => "Yelp"
     ))
-    @this_weeks_stops = []
+    @location = assign(:location, stub_model(Location,
+      :address => "Address"
+    ))
+    @this_weeks_stops = assign(:stops, [
+      stub_model(Stop,
+        :truck_id => 1,
+        :location => @location,
+        :day => Date.today.to_s,
+        :hours => "Hours"
+      ),
+      stub_model(Stop,
+        :truck_id => 1,
+        :location => @location,
+        :day => Date.today.to_s,
+        :hours => "Hours"
+      )
+    ])
   end
 
   it "renders attributes in <p>" do
@@ -18,5 +34,8 @@ describe "trucks/show" do
     rendered.should match(/Website/)
     rendered.should match(/Twitter/)
     rendered.should match(/Yelp/)
+    assert_select "tr>td", :text => "Address", :count => 2
+    assert_select "tr>td", :text => Date.today.to_s, :count => 2
+    assert_select "tr>td", :text => "Hours", :count => 2
   end
 end
