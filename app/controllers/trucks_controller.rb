@@ -14,8 +14,9 @@ class TrucksController < ApplicationController
   # GET /trucks/1.json
   def show
     @truck = Truck.find(params[:id])
-    @this_weeks_stops = @truck.find_stops_by_date_range(
-      Date.today, Date.today+7 )
+    next_week = Date.today+7
+    @this_weeks_stops = @truck.stops.find( :all, :conditions => {
+      :day => Date.today.to_s..next_week.to_s }, :order => "day ASC" )
 
     respond_to do |format|
       format.html # show.html.erb
