@@ -29,10 +29,14 @@
       <td><%= stop.day %></td>
       <td><%= stop.hours %></td>
       <td><%= link_to 'Show', stop %></td>
+      <td><%= link_to 'Edit', edit_stop_path(stop) %></td>
+      <td><%= link_to 'Destroy', stop, confirm: 'Are you sure?', method: :delete %></td>
     </tr>
   <% end %>
   </table>
 </p>
+
+<%= link_to 'New Stop', new_stop_path %>
 
 <%= link_to 'Edit', edit_truck_path(@truck) %> |
 <%= link_to 'Back', trucks_path %>

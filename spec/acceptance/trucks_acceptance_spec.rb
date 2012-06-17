@@ -14,26 +14,26 @@ feature "Trucks", %q{
     )
   end
 
-  scenario "Add a new stop to the Marination Mobile page" do
+  scenario "Add a new stop to the first truck page" do
     visit '/trucks/1'
     page.should have_link "New Stop"
     click_link "New Stop"
-    page.shoud have_content "Truck 1"
+    page.should have_content "Truck 1"
   end
 
-  scenario "Show page for first truck (Marination Mobile)" do
+  scenario "Show page for first truck" do
     visit '/trucks/1'
     page.should have_content "Truck 1"
   end
 
-  scenario "Confirm 'Show' link for first Marination stop" do
+  scenario "Confirm 'Show' link for first stop" do
     visit '/trucks/1'
     page.should have_xpath "//a[@href='/stops/1']"
   end
 
-  scenario "Confirm 'Edit' link for the  first Marination stop" do
+  scenario "Confirm 'Edit' link for the  first stop" do
     visit '/trucks/1'
-    page.should have_xpath "//a[@href='stops/1/edit']"
+    page.should have_xpath "//a[@href='/stops/1/edit']"
   end
 
 end
