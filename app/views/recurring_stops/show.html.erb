@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Truck:</b>
+  <%= @recurring_stop.truck_id %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @recurring_stop.location_id %>
+</p>
+
+<p>
+  <b>Day of week:</b>
+  <%= @recurring_stop.day_of_week %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @recurring_stop.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @recurring_stop.end_date %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%= @recurring_stop.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @recurring_stop.end_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_recurring_stop_path(@recurring_stop) %> |
+<%= link_to 'Back', recurring_stops_path %>

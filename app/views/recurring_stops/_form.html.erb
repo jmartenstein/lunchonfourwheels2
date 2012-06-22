@@ -1,0 +1,45 @@
+<%= form_for(@recurring_stop) do |f| %>
+  <% if @recurring_stop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recurring_stop.errors.count, "error") %> prohibited this recurring_stop from being saved:</h2>
+
+      <ul>
+      <% @recurring_stop.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :truck_id %><br />
+    <%= f.number_field :truck_id %>
+  </div>
+  <div class="field">
+    <%= f.label :location_id %><br />
+    <%= f.number_field :location_id %>
+  </div>
+  <div class="field">
+    <%= f.label :day_of_week %><br />
+    <%= f.number_field :day_of_week %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%= f.date_select :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br />
+    <%= f.number_field :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br />
+    <%= f.number_field :end_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

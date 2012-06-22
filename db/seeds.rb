@@ -71,18 +71,20 @@ next_wednesday  = Date.parse("Wednesday") + 7
 next_thursday   = Date.parse("Thursday") + 7
 next_friday     = Date.parse("Friday") + 7
 
-marination_thu_stop = Stop.create(
+marination_thu_stop = RecurringStop.create(
   truck_id: marination_truck.id,
   location_id: utah2401_loc.id,
-  day: next_thursday.to_s,
-  hours: "11am - 2pm"
+  day_of_week: next_thursday.wday,
+  start_time: 1100,
+  end_time: 1400
 )
 
-marination_mon_stop = Stop.create(
+marination_mon_stop = RecurringStop.create(
   truck_id: marination_truck.id,
   location_id: pontius309_loc.id,
-  day: next_monday.to_s,
-  hours: "11am - 2pm"
+  day_of_week: next_monday.wday,
+  start_time: 1100,
+  end_time: 1400
 )
 
 whereyaat_wed_stop = Stop.create(

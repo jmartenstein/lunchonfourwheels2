@@ -1,4 +1,6 @@
 Lunchonfourwheels2::Application.routes.draw do
+  resources :recurring_stops
+
   resources :stops
 
   resources :locations

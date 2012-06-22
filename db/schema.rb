@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120615050518) do
+ActiveRecord::Schema.define(:version => 20120622054738) do
 
   create_table "locations", :force => true do |t|
     t.float    "latitude"
@@ -28,6 +28,18 @@ ActiveRecord::Schema.define(:version => 20120615050518) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "recurring_stops", :force => true do |t|
+    t.integer  "truck_id"
+    t.integer  "location_id"
+    t.integer  "day_of_week"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "start_time"
+    t.integer  "end_time"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "stops", :force => true do |t|
