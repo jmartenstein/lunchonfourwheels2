@@ -1,0 +1,41 @@
+<%= form_for(@one_time_stop) do |f| %>
+  <% if @one_time_stop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@one_time_stop.errors.count, "error") %> prohibited this one_time_stop from being saved:</h2>
+
+      <ul>
+      <% @one_time_stop.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :truck_id %><br />
+    <%= f.number_field :truck_id %>
+  </div>
+  <div class="field">
+    <%= f.label :location_id %><br />
+    <%= f.number_field :location_id %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br />
+    <%= f.date_select :day %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br />
+    <%= f.number_field :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br />
+    <%= f.number_field :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :cancelled_flag %><br />
+    <%= f.check_box :cancelled_flag %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

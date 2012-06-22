@@ -1,4 +1,6 @@
 Lunchonfourwheels2::Application.routes.draw do
+  resources :one_time_stops
+
   resources :recurring_stops
 
   resources :stops

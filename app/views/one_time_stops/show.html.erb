@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Truck:</b>
+  <%= @one_time_stop.truck_id %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @one_time_stop.location_id %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @one_time_stop.day %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%= @one_time_stop.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @one_time_stop.end_time %>
+</p>
+
+<p>
+  <b>Cancelled flag:</b>
+  <%= @one_time_stop.cancelled_flag %>
+</p>
+
+
+<%= link_to 'Edit', edit_one_time_stop_path(@one_time_stop) %> |
+<%= link_to 'Back', one_time_stops_path %>

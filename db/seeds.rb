@@ -41,8 +41,9 @@ pais_truck = Truck.create(
   yelp: "http://www.yelp.com/biz/pais-seattle"
 )
 
-sodo_hood  = Neighborhood.create( name: "SoDo" )
-slu_hood   = Neighborhood.create( name: "South Lake Union" )
+sodo_hood      = Neighborhood.create( name: "SoDo" )
+slu_hood       = Neighborhood.create( name: "South Lake Union" )
+downtown_hood  = Neighborhood.create( name: "Downtown" )
 
 harrison1126_loc = Location.create(
   address: "1126 Harrison St.",
@@ -65,8 +66,15 @@ pontius309_loc = Location.create(
   neighborhood_id: slu_hood.id
 )
 
+stewart531_loc = Location.create(
+  address: "531 Stewart St.",
+  description: "McGraw Square",
+  city_state: "Seattle, WA",
+  neighborhood_id: downtown_hood.id
+)
+
 next_monday     = Date.parse("Monday") + 7
-next_tuesday     = Date.parse("Tuesday") + 7
+next_tuesday    = Date.parse("Tuesday") + 7
 next_wednesday  = Date.parse("Wednesday") + 7
 next_thursday   = Date.parse("Thursday") + 7
 next_friday     = Date.parse("Friday") + 7
@@ -85,6 +93,22 @@ marination_mon_stop = RecurringStop.create(
   day_of_week: next_monday.wday,
   start_time: 1100,
   end_time: 1400
+)
+
+skillet_0622_stop = OneTimeStop.create(
+  truck_id: skillet_truck.id,
+  location_id: stewart531_loc.id,
+  day: Date.new(2012, 6, 22).to_s,
+  start_time: 1100,
+  end_time: 1430
+)
+
+skillet_0626_stop = OneTimeStop.create(
+  truck_id: skillet_truck.id,
+  location_id: utah2401_loc.id,
+  day: Date.new(2012, 6, 26).to_s,
+  start_time: 1100,
+  end_time: 1430
 )
 
 whereyaat_wed_stop = Stop.create(

@@ -1,0 +1,33 @@
+<h1>Listing one_time_stops</h1>
+
+<table>
+  <tr>
+    <th>Truck</th>
+    <th>Location</th>
+    <th>Day</th>
+    <th>Start time</th>
+    <th>End time</th>
+    <th>Cancelled flag</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @one_time_stops.each do |one_time_stop| %>
+  <tr>
+    <td><%= one_time_stop.truck_id %></td>
+    <td><%= one_time_stop.location_id %></td>
+    <td><%= one_time_stop.day %></td>
+    <td><%= one_time_stop.start_time %></td>
+    <td><%= one_time_stop.end_time %></td>
+    <td><%= one_time_stop.cancelled_flag %></td>
+    <td><%= link_to 'Show', one_time_stop %></td>
+    <td><%= link_to 'Edit', edit_one_time_stop_path(one_time_stop) %></td>
+    <td><%= link_to 'Destroy', one_time_stop, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New One time stop', new_one_time_stop_path %>
