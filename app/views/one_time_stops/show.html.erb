@@ -2,12 +2,17 @@
 
 <p>
   <b>Truck:</b>
-  <%= @one_time_stop.truck_id %>
+  <%= link_to @one_time_stop.truck.name, @one_time_stop.truck %>
+</p>
+
+<p>
+  <b>Neighborhood:</b>
+  <%= @one_time_stop.location.neighborhood.name %>
 </p>
 
 <p>
   <b>Location:</b>
-  <%= @one_time_stop.location_id %>
+  <%= @one_time_stop.location.address %>
 </p>
 
 <p>

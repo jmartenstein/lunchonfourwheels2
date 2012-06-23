@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :truck_id %><br />
-    <%= f.number_field :truck_id %>
+    <%= f.collection_select( :truck_id, Truck.all, :id, :name )  %>
   </div>
   <div class="field">
     <%= f.label :location_id %><br />
-    <%= f.number_field :location_id %>
+    <%= f.collection_select( :location_id, Location.all, :id, :address) %>
   </div>
   <div class="field">
     <%= f.label :day %><br />
