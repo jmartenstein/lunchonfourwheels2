@@ -15,7 +15,7 @@ class TrucksController < ApplicationController
   def show
     @truck = Truck.find(params[:id])
     next_week = Date.today+7
-    @this_weeks_stops = @truck.stops.find( :all, :conditions => {
+    @this_weeks_stops = @truck.one_time_stops.find( :all, :conditions => {
       :day => Date.today.to_s..next_week.to_s }, :order => "day ASC" )
 
     respond_to do |format|

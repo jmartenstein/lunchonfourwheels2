@@ -14,11 +14,12 @@ feature "Trucks", %q{
                    :address => "Address 2",
                    :neighborhood_id => @hood1
     )
-    @stop1 = Stop.create( 
+    @stop1 = OneTimeStop.create( 
       :truck_id => 1,
       :location_id => 1,
       :day => Date.today.to_s,
-      :hours => "Hours"
+      :start_time => 1100,
+      :end_time => 1400
     )
   end
 
@@ -36,7 +37,6 @@ feature "Trucks", %q{
     # fill in the form to create a new stop
     select @location2.address, :from => 'Location'
     fill_in 'Day', :with => Date.today.to_s
-    fill_in 'Hours', :with => "11a - 2p"
     
     # click the create stop button, then the truck link
     click_button 'Create Stop'
@@ -52,12 +52,12 @@ feature "Trucks", %q{
 
   scenario "Confirm 'Show' link for first stop" do
     visit '/trucks/1'
-    page.should have_xpath "//a[@href='/stops/1']"
+    page.should have_xpath "//a[@href='/one_time_stops/1']"
   end
 
   scenario "Confirm 'Edit' link for the  first stop" do
     visit '/trucks/1'
-    page.should have_xpath "//a[@href='/stops/1/edit']"
+    page.should have_xpath "//a[@href='/one_time_stops/1/edit']"
   end
 
 end
