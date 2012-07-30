@@ -1,15 +1,15 @@
 Lunchonfourwheels2::Application.routes.draw do
   resources :one_time_stops
 
-  resources :recurring_stops
-
   resources :stops
 
   resources :locations
 
   resources :neighborhoods
 
-  resources :trucks
+  resources :trucks do
+    resources :recurring_stops
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

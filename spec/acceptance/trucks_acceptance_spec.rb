@@ -21,6 +21,11 @@ feature "Trucks", %q{
       :start_time => 1100,
       :end_time => 1400
     )
+    @stop2 = RecurringStop.create(
+      :truck_id => 1,
+      :location_id => 2,
+      :day_of_week => Date.today.strftime('%A')
+    )
   end
 
   scenario "Add a new stop to the first truck page" do
@@ -43,6 +48,11 @@ feature "Trucks", %q{
     click_link @truck1.name
     page.should have_content "Name: #{@truck1.name}"
 
+  end
+
+  scenario "Show recurring stops for first truck" do
+    visit '/trucks/1/recurring_stops'
+    page.should have_content "Address 2"
   end
 
   scenario "Show page for first truck" do

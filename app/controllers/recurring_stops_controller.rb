@@ -2,11 +2,11 @@ class RecurringStopsController < ApplicationController
   # GET /recurring_stops
   # GET /recurring_stops.json
   def index
-    @recurring_stops = RecurringStop.all
+    @truck_recurring_stops = RecurringStop.find_all_by_truck_id(params[:truck_id])
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @recurring_stops }
+      format.json { render json: @truck_recurring_stops }
     end
   end
 
