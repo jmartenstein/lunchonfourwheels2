@@ -51,7 +51,8 @@ feature "Trucks", %q{
   end
 
   scenario "Show recurring stops for first truck" do
-    visit '/trucks/1/recurring_stops'
+    visit '/trucks/1'
+    click_link 'Recurring Stops'
     page.should have_content "Address 2"
   end
 

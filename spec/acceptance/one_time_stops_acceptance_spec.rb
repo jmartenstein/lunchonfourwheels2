@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "Stops", %q{
+feature "One Time Stops", %q{
 } do
 
   background do
@@ -32,4 +32,4 @@ feature "Stops", %q{
     #page.should have_content @stop1.day
   end
 
-end  # feature Stops
+end  # feature One Time Stops
