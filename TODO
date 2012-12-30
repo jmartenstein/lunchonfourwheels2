@@ -12,7 +12,12 @@ x Add Capybara gem
 x Write initial acceptance test
 x Write acceptance tests for stop show link of truck page
 
-x Modify Stops index to show truck and location address / neighborhood
+x Write out skeleton function for lookup_lat_long in Location class
+x Write out curl string to lookup LatLong for 1126 Harrison
+x Write two unit tests for lookupLatLong: one for 1126 Harrsion, and one for 2401 Utah Ave.
+x Write lookupLatLong function for Location objects
+
+Modify Stops index to show truck and location address / neighborhood
 Write out a complete scenario for starting at the "Trucks" page, and adding
   a new stop to Marination Mobile
 Update Stop acceptance tests to look for truck names on Edit page
@@ -30,8 +35,4 @@ Modify index page to redirect to trucks list (for now)
 
 How to easily / quickly load data?
 
-Write out skeleton function for lookup_lat_long in Location class
-Write out curl string to lookup LatLong for 1126 Harrison
-Write two unit tests for lookupLatLong: one for 1126 Harrsion, and one for 2401 Utah Ave.
-Write lookupLatLong function for Location objects
 
