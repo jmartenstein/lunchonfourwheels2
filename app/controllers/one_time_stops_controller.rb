@@ -26,6 +26,9 @@ class OneTimeStopsController < ApplicationController
   def new
     @one_time_stop = OneTimeStop.new
 
+    # if a truck id parameter is passed in, otherwise default to 1
+    @one_time_stop.truck = Truck.find(params[:truck_id] || 1)
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @one_time_stop }
