@@ -7,11 +7,11 @@ feature "Trucks", %q{
     @truck1 = Truck.create( :name => "Truck 1" )
     @hood1 = Neighborhood.create( :name => "Hood 1" )
     @location1 = Location.create( 
-                   :address => "Address 1",
+                   :address => "2401 Utah Ave. S, Seattle, WA",
                    :neighborhood_id => @hood1
     )
     @location2 = Location.create( 
-                   :address => "Address 2",
+                   :address => "1624 Harrison St., Seattle, WA",
                    :neighborhood_id => @hood1
     )
     @stop1 = OneTimeStop.create( 
@@ -41,8 +41,9 @@ feature "Trucks", %q{
 
     # fill in the form to create a new stop
     select @location2.address, :from => 'Location'
-    fill_in 'Day', :with => Date.today.to_s
-    
+    #fill_in 'Day', :with => Date.today.to_s
+    #select '2012', :from => 'Day'
+
     # click the create stop button, then the truck link
     click_button 'Create Stop'
     click_link @truck1.name
@@ -53,7 +54,7 @@ feature "Trucks", %q{
   scenario "Show recurring stops for first truck" do
     visit '/trucks/1'
     click_link 'Recurring Stops'
-    page.should have_content "Address 2"
+    page.should have_content "1624 Harrison St."
   end
 
   scenario "Show page for first truck" do

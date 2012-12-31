@@ -8,7 +8,7 @@ feature "Recurring Stops", %q{
     @truck2 = Truck.create( :name => "Truck 2" )
     @hood1 = Neighborhood.create( :name => "Hood 1" )
     @location1 = Location.create(
-                   :address => "Address 1",
+                   :address => "2401 Utah Ave. S, Seattle, WA",
                    :neighborhood_id => @hood1
                  )
   end  # background
