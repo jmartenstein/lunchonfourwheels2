@@ -37,6 +37,7 @@
   </table>
 </p>
 
-<%= link_to 'New Stop', new_one_time_stop_path %> |
+<%= link_to 'New Stop', new_one_time_stop_path(:truck_id => @truck.id) %> |
+<%= link_to 'Recurring Stops', truck_recurring_stops_path(@truck) %> |
 <%= link_to 'Edit', edit_truck_path(@truck) %> |
 <%= link_to 'Back', trucks_path %>
